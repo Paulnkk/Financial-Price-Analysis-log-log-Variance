@@ -45,6 +45,7 @@ class sd_calc:
                 else:
                     delta_return_perc = ((close_list[t + tau] - close_list[t]) / close_list[t + tau]) * 100
                     return_vec.append(delta_return_perc)
+            # generate array with var values for 1000 time shifts 
             var_return = np.var(return_vec)
             sd_return = math.sqrt(var_return)
             print('Standard dev:', sd_return)
