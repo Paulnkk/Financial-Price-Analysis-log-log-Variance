@@ -41,6 +41,7 @@ class sd_calc:
                 # break if t + tau exceeds total len of time units
                 if (t + tau >= len(close_list)):
                     break
+                # Calc percentage change in price over time shifts
                 else:
                     delta_return_perc = ((close_list[t + tau] - close_list[t]) / close_list[t + tau]) * 100
                     return_vec.append(delta_return_perc)
