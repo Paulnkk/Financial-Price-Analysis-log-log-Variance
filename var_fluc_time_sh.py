@@ -19,7 +19,7 @@ class sd_calc:
     # calc sd change 'es' for ft data
 
     def compute(self):
-        # split operations into 10 subproblems
+        # split operations into 10 subproblems (10 * 1000 time shifts (1000 time shifts per subproblem) -> 10000 time shifts)
         arg_list = [(x, x*1000, (x+1)*1000, self.es) for x in range(0, 10, 1)]
         
         # start multiprocessing
